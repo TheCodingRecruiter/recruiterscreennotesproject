@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block base_head %}
+<link rel='stylesheet' href='{% static "css/recruiterscreen.css" %}'>
+{% endblock%}
+
+
+{% block content %}
+
+<div class="col-12 col-md-6">
+
+<h1>{{title}}</h1>
+
+<form method='POST' action='' class="col-12 col-md-6" enctype="multipart/form-data"> {% csrf_token %}
+<br><br><br><br>
+
+<div class="row">
+    <div>
+         <p>Date of Screen: {{form.screen_date}}</p>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div>
+        <p>Candidate Name: {{form.candidatename}}</p>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div>
+        <p>Email: {{form.email}}</p>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div>
+        <p>Experience: </p>
+    {{form.experience}}
+    </div>
+</div>
+
+
+        <p>Leadership: </p>
+    {{form.leadership}}
+
+        <p>Motivation: </p>
+    {{form.motivation}}
+
+        <p>Compensation: </p>
+    {{form.compensation}}
+
+        <p>Additional Comments: </p>
+    {{form.additional_comments}}
+<br><br>
+     <p>Visa: {{form.visa1}}</p>
+
+<br>
+    <p>If Other Visa: </p>
+    {{form.visa2}}
+
+
+<br><br><br><br>
+<button class="button" type="submit" name="action" value='Save'>Save Notes</button>
+
+</div>
+{% endblock %}
