@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load widget_tweaks %}
 
 
 {% block base_head %}
@@ -11,10 +12,12 @@
 
 <div class="col-12 col-md-6">
 
+
 <h1>{{title}}</h1>
 
 <form method='POST' action='' class="col-12 col-md-6" enctype="multipart/form-data"> {% csrf_token %}
 <br><br><br><br>
+
 
 <div class="row">
     <div>
@@ -26,70 +29,119 @@
 
 <div class="row">
     <div>
-        <p>Candidate Name: {{form.candidatename}}</p>
+        <p>Candidate Name: {{form.candidatename | add_class:"form-control" }}</p>
     </div>
 </div>
 <br>
 
 <div class="row">
     <div>
-        <p>Email: {{form.email}}</p>
+        <p>Email: {{form.email | add_class:"form-control" }}</p>
     </div>
 </div>
 <br>
 
 <div class="row">
+
+
     <div>
         <p>Experience: </p>
-    {{form.experience}}
+        <p>{{form.experience | add_class:"form-control"}}</p>
     </div>
 </div>
-
-
+    <div class="row">
+<div>
         <p>Leadership: </p>
-    {{form.leadership}}
-
+    <p>{{form.leadership | add_class:"form-control"}}</p>
+</div>
+</div>
+<div class="row">
+<div>
         <p>Motivation: </p>
-    {{form.motivation}}
-
+    <p>{{form.motivation | add_class:"form-control"}}</p>
+</div>
+</div>
+<div class="row">
+<div>
         <p>Compensation: </p>
-    {{form.compensation}}
+    <p>{{form.compensation | add_class:"form-control"}}</p>
+</div>
+</div>
 
+<div class="row">
+<div>
         <p>Additional Comments: </p>
-    {{form.additional_comments}}
-
-
+    <p>{{form.additional_comments | add_class:"form-control"}}</p>
+</div>
+</div>
 <br><br>
+
+<div class="row">
+<div>
      <p>What type of visa status do they currently hold? </p>
      {{form.visa2}}
      <br>
      <p>If Other: </p>
-     {{form.visa7}}
+     {{form.visa7 | add_class:"form-control"}}
      <br>
+</div>
+</div>
+
+
+
+
+
+
 
 <br>
+<div class="row">
+<div>
     <p>Does the candidate have the unrestricted right to work indefinitely in the United States? What is the candidate's current status? </p>
-    {{form.visa1}}
-
+    <p>
+    {{form.visa1 | add_class:"form-control"}}
+</p>
+</div>
+</div>
     <br>
 
+    
     <br>
+    <div class="row">
+        <div>
     <p>If sponsorship is required, when does the candidate's current U.S. Immigration status expire?</p>
-    {{form.visa3}}
-
+<p>{{form.visa3 | add_class:"form-control"}}</p>
+</div>
+</div>
     <br>
+
+    <div class="row">
+        <div>
     <p>If in H-1B status, how much time does he or she have remaining towards the 6 year limit?</p>
-    {{form.visa4}}
+<p>{{form.visa4 | add_class:"form-control"}}</p>
+</div>
+    </div>
 
+
+    
     <br>
+
+
+    <div class="row">
+        <div>
     <p>If on OPT, is the candidate eligible for a STEM extension? If so, what is the expected expiration date of their STEM extension?</p>
-    {{form.visa5}}
-
+<p>{{form.visa5 | add_class:"form-control"}}</p>
+    </div>
+</div>
     <br>
-    <p>Is the candidate in the green card process? Does he or she have a certified PERM? Does he or she have an approved I-140, and have 180 days passed since approval? </p>
-    {{form.visa6}}
 
+    <div class="row">
+    <div>
+        <p>Is the candidate in the green card process? Does he or she have a certified PERM? Does he or she have an approved I-140, and have 180 days passed since approval? </p>
+<p>{{form.visa6 | add_class:"form-control"}}</p>
+    </div>
+</div>
 
+</div>
 <br><br><br><br>
 <button class="button" type="submit" name="action" value='Save'>Save Notes</button>
 
