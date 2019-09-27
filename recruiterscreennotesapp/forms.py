@@ -5,14 +5,14 @@ from datetime import date
 
 
 VISA_CHOICES = (
-    (1, 'US Citizen'),
-    (2, 'Green Card Holder'),
-    (3, 'F1 - OPT'),
-    (4, 'F1 - CPT'),
-    (5, 'H-1B'),
-    (6, 'H-4'),
-    (7, 'TN'),
-    (8, 'Other'),
+    ('US Citizen', 'US Citizen'),
+    ('Green Card Holder', 'Green Card Holder'),
+    ('F1 - OPT', 'F1 - OPT'),
+    ('F1 - CPT', 'F1 - CPT'),
+    ('H-1B', 'H-1B'),
+    ('H-4', 'H-4'),
+    ('TN', 'TN'),
+    ('Other', 'Other'),
 )
 
 
@@ -48,5 +48,7 @@ class RecruiterScreenForm(forms.Form):
     visa5 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''If on OPT, is the candidate eligible for a STEM extension? If so, what is the expected expiration date of their STEM extension?'''}))
 
     visa6 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''Is the candidate in the green card process? Does he or she have a certified PERM? Does he or she have an approved I-140, and have 180 days passed since approval?'''}))
+
+    visa7 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''If 'Other', list Visa Type: '''}))
 
     additional_comments = forms.CharField(required=False, widget=forms.Textarea(attrs={'placeholder':'Any Additional Comments'}))
