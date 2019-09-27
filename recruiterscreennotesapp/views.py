@@ -1,7 +1,6 @@
 from django.shortcuts import render
 
 from docx import Document
-from docx.shared import Inches
 
 # Create your views here.
 
@@ -70,6 +69,13 @@ def recruiterscreen(request):
             p7.add_run(compensation)
             p8= document.add_paragraph('Additional Comments: ')
             p8.add_run(additional_comments)
+
+            document.add_heading('Visa Information', level=1)
+            p9=document.add_paragraph('Visa Type: ')
+            p9.add_run(visa1)
+            p10=document.add_paragraph('Other Visa Type: ')
+            p10.add_run(visa2)
+
 
             document.save(docname)
 
