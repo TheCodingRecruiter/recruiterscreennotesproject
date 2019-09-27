@@ -40,7 +40,7 @@ def recruiterscreen(request):
             additional_comments = form.cleaned_data['additional_comments']
 
             def makefilenameandpath():
-                new_filename = ('Recruiter Screen - ' + candidatename)
+                new_filename = ('Recruiter Screen - ' + candidatename + '-' + str(screen_date))
                 ext = 'docx'
                 final_filename = '{new_filename}.{ext}'.format(new_filename=new_filename, ext=ext)
                 print(final_filename)

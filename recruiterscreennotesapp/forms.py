@@ -5,12 +5,14 @@ from datetime import date
 
 
 VISA_CHOICES = (
-    (1, 'F1 - OPT'),
-    (2, 'F1 - CPT'),
-    (3, 'H-1B'),
-    (4, 'H-4'),
-    (5, 'TN'),
-    (6, 'Other'),
+    (1, 'US Citizen'),
+    (2, 'Green Card Holder'),
+    (3, 'F1 - OPT'),
+    (4, 'F1 - CPT'),
+    (5, 'H-1B'),
+    (6, 'H-4'),
+    (7, 'TN'),
+    (8, 'Other'),
 )
 
 
@@ -35,8 +37,16 @@ class RecruiterScreenForm(forms.Form):
 
     compensation = forms.CharField(required=False, widget=forms.Textarea(attrs={'placeholder':'Enter Comp Details'}))
 
-    visa1 = forms.ChoiceField(choices=VISA_CHOICES)
+    visa2 = forms.ChoiceField(choices=VISA_CHOICES)
 
-    visa2 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'Other Visa'}))
+    visa1 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''Does the candidate have the unrestricted right to work indefinitely in the United States? What is the candidate's current status?"'''}))
+
+    visa3 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''If sponsorship is required, when does the candidate's current U.S. Immigration status expire?'''}))
+
+    visa4 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''If in H-1B status, how much time does he or she have remaining towards the 6 year limit?'''}))
+
+    visa5 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''If on OPT, is the candidate eligible for a STEM extension? If so, what is the expected expiration date of their STEM extension?'''}))
+
+    visa6 = forms.CharField(required=False, max_length=100, widget=forms.Textarea(attrs={'placeholder':'''Is the candidate in the green card process? Does he or she have a certified PERM? Does he or she have an approved I-140, and have 180 days passed since approval?'''}))
 
     additional_comments = forms.CharField(required=False, widget=forms.Textarea(attrs={'placeholder':'Any Additional Comments'}))
