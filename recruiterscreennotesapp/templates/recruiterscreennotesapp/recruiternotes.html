@@ -17,22 +17,65 @@
 <h1>{{title}}</h1>
 
 <div class="sidebar">
-<p> Customer Engineering Pitches </p>
+<h3> Customer Engineering Pitches </h3>
 <hr>
 
 <p>
-<p class="text-left" onclick="toggle_visibility('APP-ENGINEERING')">Application Engineering Pitch</p>
-<div class="text-left" id="APP-ENGINEERING" style="display:none;">
-<p class="text-left"> This group is responsible for creating and maintaining all functions that go into our iOs and Android Apps. The goal is to enhance the mobile customer experience as ~60%, which equates to over 750,000 daily active users, of our customers shop via mobile devices.  Wayfair boasts the largest mobile team in Boston, ~100 total, and currently is 70% iOs and 30% android.  This team is working on arguably the most cutting edge projects on the engineering team, including visual search. <br>
+<p onclick="toggle_visibility('APP-ENGINEERING')">Application Engineering Pitch</p>
+<div id="APP-ENGINEERING" style="display:none;">
+<p> This group is responsible for creating and maintaining all functions that go into our iOs and Android Apps. The goal is to enhance the mobile customer experience as ~60%, which equates to over 750,000 daily active users, of our customers shop via mobile devices.  Wayfair boasts the largest mobile team in Boston, ~100 total, and currently is 70% iOs and 30% android.  This team is working on arguably the most cutting edge projects on the engineering team, including visual search. <br>
         TECH/LANGUAGES: ANDROID - KOTLIN, JAVA.  IOS: SWIFT
         </p>
-
+</div>
 </p>
 
+<hr>
+<p>
+        <p onclick="toggle_visibility('STOREFRONT-ENGINEERING')">Storefront Engineering Pitch</p>
+        <div id="STOREFRONT-ENGINEERING" style="display:none;">
+        <p> This group focuses on our customer facing site. On this team you would be able to span the full stack and have great impact on the customer experience.  You will be part of creating brand new products to enhance the customer interaction and in concealing the complexity of what our customer experience on our website. Some of the exciting products they are working on include: Room Planner, Favorites Lists, a POS system for our Physical Retail store, and responsive headers on the frontend side. You will help to solve some problems with scalability, as we are growing SO quickly. <br>
+                TECH/LANGUAGES: PHP, JAVASCRIPT, SOME JAVA, PYTHON, MINIMAL SQL/DB
+                
+                </p>
+        </div>
+        </p>
+
+        <hr>
+        <p>
+                <p onclick="toggle_visibility('ATCIE')">Ad Tech & Customer Information Engineering (ATCIE) Pitch</p>
+                <div id="ATCIE" style="display:none;">
+                <p> This team is responsible for building marketing software using customer data points to create personalized ads and product recommendations for our customers.  This team is continuously using consumer behavior and putting Machine Learning models into production to enhance the Wayfair experience. These models that get productionized help automate our bidding process for ads online, create personalized product recommendations, or even redirect customers to the optimal customer service representative etc.  Overall, the team is broken down into 4 main superpods: AdTech Systems, Notifications, Recommendations, and Customer Information Systems. <br>
+                        TECH/LANGUAGES: JAVA, PYTHON, SPARK, STORM, KAFKA, HADOOP
+                        
+                        </p>
+                </div>
+                </p>
+
+                <hr>
+                <p>
+                        <p onclick="toggle_visibility('CATALOG-ENGINEERING')">Catalog Engineering Pitch</p>
+                        <div id="CATALOG-ENGINEERING" style="display:none;">
+                        <p> This group focuses on everything related to the products we carry which includes billions of product SKUs and terabytes of data. including but not limited to: where they are found on the website, and how our customers find them, pricing/promotions information, and how the products are shown on the site.  These engineering teams are building highly interactive web tools to support our extensive product catalog.  They are leading initiatives by moving the company towards more of a cloud base architecture as well as more R&D around machine learning and competitive intelligence. The teams include Merchandise Engineering, Virtual Media Team, Pricing and Profitability and Search Technologies. <br>
+                                TECH/LANGUAGES: Python, PHP, JAVA, C#.NET, Kafka, Spark, SQL
+                                
+                                
+                                </p>
+                        </div>
+                        </p>
+<br>
+<br>
+<br>
 
 
+    <h3> Compensation Calculator </h3>
+    <!-- Input calculator here  -->
+ <p> Calculator will go here</p>
+    <br>
+    <br>
+    <br>
 
-
+    <h3> Overcoming Obstacles  </h3>
+    <p> Common challenges will go here with methods to overcome them</p>
 
 
 
@@ -170,21 +213,16 @@
     </div>
 </div>
 
-</div>
+
 <br><br><br><br>
+
 <button class="button" type="submit" name="action" value='Save'>Save Notes</button>
 
-<br><br><br><br><br>
-
-
 </div>
 
 
+<!-- JAVASCRIPT CODE GOES HERE BELOW THIS LINE.  USING FOR SIDEBAR CURRENTLY TO DISPLAY/HIDE BLOCK -->
 <script type="text/javascript">
-
-
-
-
 
     function toggle_visibility(id) {
        var e = document.getElementById(id);
@@ -195,11 +233,7 @@
     }
 
 
-
-
-
-
-
-
 </script>
+
+
 {% endblock %}

@@ -1,13 +1,14 @@
 body {
-    background: #0b6dc9;
+    background: #923eff;
 }
 
-.container {
-    background: #0b6dc9;
-}
+/* .container {
+    
+} */
 
 .sidebar {
     float:right;
+    
 }
 
 .left {
