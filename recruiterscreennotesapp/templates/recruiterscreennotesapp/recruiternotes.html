@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-{% load static %}
+
 {% load widget_tweaks %}
 
 
 {% block base_head %}
-<link rel='stylesheet' href='{% static "css/recruiterscreen.css" %}'>
+
 {% endblock%}
 
 
@@ -12,12 +12,41 @@
 
 <div class="col-12 col-md-6">
 
+    
 
 <h1>{{title}}</h1>
 
-<form method='POST' action='' class="col-12 col-md-6" enctype="multipart/form-data"> {% csrf_token %}
+<div class="sidebar">
+<p> Customer Engineering Pitches </p>
+<hr>
+
+<p>
+<p class="text-left" onclick="toggle_visibility('APP-ENGINEERING')">Application Engineering Pitch</p>
+<div class="text-left" id="APP-ENGINEERING" style="display:none;">
+<p class="text-left"> This group is responsible for creating and maintaining all functions that go into our iOs and Android Apps. The goal is to enhance the mobile customer experience as ~60%, which equates to over 750,000 daily active users, of our customers shop via mobile devices.  Wayfair boasts the largest mobile team in Boston, ~100 total, and currently is 70% iOs and 30% android.  This team is working on arguably the most cutting edge projects on the engineering team, including visual search. <br>
+        TECH/LANGUAGES: ANDROID - KOTLIN, JAVA.  IOS: SWIFT
+        </p>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- THE SIDEBAR IS ABOVE THIS LINE AND THE FORM IS BELOW THIS LINE.  THEY OPERATE OFF OF FLOAT -->
+
+<form method='POST' action='' class="col-12 col-md-6 left" enctype="multipart/form-data"> {% csrf_token %}
 <br><br><br><br>
 
+ 
 
 <div class="row">
     <div>
@@ -149,4 +178,28 @@
 
 
 </div>
+
+
+<script type="text/javascript">
+
+
+
+
+
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+
+
+
+
+
+
+
+
+</script>
 {% endblock %}
