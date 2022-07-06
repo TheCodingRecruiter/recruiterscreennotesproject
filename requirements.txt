@@ -4,7 +4,7 @@ Django==2.2.5
 django-widget-tweaks==1.4.5
 isort==4.3.21
 lazy-object-proxy==1.4.2
-lxml==4.4.1
+lxml==4.9.1
 mccabe==0.6.1
 pylint==2.4.1
 python-docx==0.8.10
